@@ -11,8 +11,9 @@ Any meaningful change must pass the layer-specific test gate.
    - pytest -q
 2. For frontend changes, run from frontend directory:
    - npm test
-3. Do not merge rule or code changes that introduce failing tests.
-4. If tests are skipped, document exactly why and what remains unverified.
+3. For cross-layer changes (API contract + UI consumption), run both suites.
+4. Do not merge rule or code changes that introduce failing tests.
+5. If tests are skipped, document exactly why and what remains unverified.
 
 ## Good practice observed
 
@@ -28,3 +29,4 @@ Any meaningful change must pass the layer-specific test gate.
 - Relevant tests executed.
 - Results recorded in change notes or memory-bank status.
 - Any warning or known risk documented.
+- If both backend and frontend were touched, both suites were executed.

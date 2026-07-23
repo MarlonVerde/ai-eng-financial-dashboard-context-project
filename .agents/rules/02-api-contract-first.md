@@ -11,6 +11,10 @@ Contract drift quickly causes runtime or chart computation errors.
 2. Keep endpoint filters explicit and typed in FastAPI query params.
 3. Preserve deterministic demo behavior for tests (seeded mock generation), unless migration plan is included.
 4. Add or adjust tests when endpoint behavior is changed.
+5. When adding a new analytics endpoint, include:
+	- response_model in FastAPI route decorator
+	- at least one backend test that validates payload shape and a filter/constraint behavior
+	- frontend type or adapter update if the endpoint is consumed by UI
 
 ## Good practice observed
 
@@ -26,3 +30,4 @@ Contract drift quickly causes runtime or chart computation errors.
 - Response model and TS type alignment checked.
 - API behavior covered by backend tests.
 - Frontend transform/consumption logic validated by tests or manual checks.
+- If a new endpoint was added, contract checklist items are completed.

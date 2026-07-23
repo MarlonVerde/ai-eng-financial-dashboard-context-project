@@ -11,6 +11,7 @@ Without explicit guardrails, permissive defaults can leak into production-orient
 2. For deploy-like environments, replace wildcard origins with explicit allowlist.
 3. Keep API origin configurable via VITE_API_BASE_URL (frontend) and avoid hardcoding non-local hosts.
 4. Track dependency risk signals (for example npm audit output) in project status notes.
+5. Never combine `allow_credentials=True` with wildcard origins in shared or production-like environments.
 
 ## Good practice observed
 
